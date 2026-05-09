@@ -21,7 +21,7 @@ Retinopathy_Detection/
 │
 ├── notebooks/
 │   ├── 01_data_audit.ipynb
-│   ├── 02_preprocessing.ipynb
+│   ├── 02_processing.ipynb
 │   ├── 03_densenet121_training.ipynb
 │   ├── 04_mobilenetv2_training.ipynb
 │   ├── 05_efficientnetb0_training.ipynb
