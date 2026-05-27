@@ -1,0 +1,36 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+
+# VS Code
+.vscode/
+
+# Git
+.git/
+.gitignore
+
+# OS files
+.DS_Store
+
+# Notebook files (optional)
+*.ipynb
+
+# Data files (optional)
+data/raw/
+data/processed/
+
+# Model training artifacts
+*.csv
+
+# Kubernetes configs not needed inside container
+kubernetes/
+
+# Docker files themselves not needed inside image
+.dockerignore

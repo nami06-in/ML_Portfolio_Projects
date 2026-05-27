@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: concrete-strength-deployment
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: concrete-strength-app
+
+  template:
+    metadata:
+      labels:
+        app: concrete-strength-app
+
+    spec:
+      containers:
+      - name: concrete-strength-container
+
+        image: concrete-strength-app:latest
+
+        imagePullPolicy: Never
+
+        ports:
+        - containerPort: 5000
