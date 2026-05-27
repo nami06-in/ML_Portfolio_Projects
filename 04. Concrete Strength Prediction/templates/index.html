@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concrete Strength Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- HERO IMAGE -->
+    <div class="hero-section">
+        <img src="{{ url_for('static', filename='concrete.jpg') }}" alt="Concrete Banner">
+        <div class="overlay">
+            <h1>Concrete Strength Prediction</h1>
+            <p>AI-Powered Concrete Compressive Strength Estimation</p>
+        </div>
+    </div>
+
+    <!-- FORM SECTION -->
+    <div class="container">
+
+        <form action="{{ url_for('predict') }}" method="post">
+
+            <div class="form-grid">
+
+                <!-- LEFT SIDE -->
+                <div class="form-column">
+
+                    <label>Cement</label>
+                    <input type="number" step="any" name="cement" required>
+
+                    <label>Slag</label>
+                    <input type="number" step="any" name="slag" required>
+
+                    <label>Ash</label>
+                    <input type="number" step="any" name="ash" required>
+
+                    <label>Water</label>
+                    <input type="number" step="any" name="water" required>
+
+                    <label>Super Plasticizer</label>
+                    <input type="number" step="any" name="superplastic" required>
+
+                    <label>Coarse Aggregate</label>
+                    <input type="number" step="any" name="coarseagg" required>
+
+                    <label>Fine Aggregate</label>
+                    <input type="number" step="any" name="fineagg" required>
+
+                </div>
+
+                <!-- RIGHT SIDE -->
+                <div class="form-column">
+
+                    <label>Age</label>
+                    <input type="number" step="any" name="age" required>
+
+                    <label>Water Cement Ratio</label>
+                    <input type="number" step="any" name="water_cement_ratio" required>
+
+                    <label>Total Aggregate</label>
+                    <input type="number" step="any" name="total_agg" required>
+
+                    <label>Binder</label>
+                    <input type="number" step="any" name="binder" required>
+
+                    <label>Slag Ratio</label>
+                    <input type="number" step="any" name="slag_ratio" required>
+
+                    <label>Ash Ratio</label>
+                    <input type="number" step="any" name="ash_ratio" required>
+
+                    <label>Aggregate Binder Ratio</label>
+                    <input type="number" step="any" name="agg_binder_ratio" required>
+
+                </div>
+
+            </div>
+
+            <div class="button-section">
+                <button type="submit">
+                    Predict Strength
+                </button>
+            </div>
+
+        </form>
+
+        <!-- PREDICTION OUTPUT -->
+
+        <div class="result">
+            <h2>{{ prediction_text }}</h2>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

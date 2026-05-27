@@ -1,0 +1,160 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    color:#222;
+}
+
+/* HERO SECTION */
+
+.hero-section{
+    position:relative;
+    width:100%;
+    height:400px;
+    overflow:hidden;
+}
+
+.hero-section img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+    text-align:center;
+}
+
+.overlay h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+.overlay p{
+    font-size:20px;
+}
+
+/* FORM CONTAINER */
+
+.container{
+    width:90%;
+    max-width:1200px;
+
+    margin:40px auto;
+    background:white;
+
+    padding:40px;
+    border-radius:12px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* GRID */
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.form-column{
+    display:flex;
+    flex-direction:column;
+}
+
+/* LABELS */
+
+label{
+    margin-top:15px;
+    margin-bottom:8px;
+
+    font-weight:bold;
+}
+
+/* INPUTS */
+
+input{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+
+    font-size:16px;
+}
+
+input:focus{
+    outline:none;
+    border-color:#444;
+}
+
+/* BUTTON */
+
+.button-section{
+    text-align:center;
+    margin-top:40px;
+}
+
+button{
+    background:#1f4e79;
+    color:white;
+
+    border:none;
+
+    padding:15px 40px;
+
+    font-size:18px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+    background:#163a5c;
+}
+
+/* RESULT */
+
+.result{
+    text-align:center;
+    margin-top:30px;
+}
+
+.result h2{
+    color:#1f4e79;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .overlay h1{
+        font-size:32px;
+    }
+
+    .overlay p{
+        font-size:16px;
+    }
+}
