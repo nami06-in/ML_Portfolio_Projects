@@ -10,17 +10,17 @@
 *.vscode/
 
 # Jupyter checkpoints
-.ipynb_checkpoints/
+*.ipynb_checkpoints/
 
 # System files
-.DS_Store
-Thumbs.db
+*.DS_Store
+*Thumbs.db
 
 # Logs
 *.log
 
 # Environment variables
-.env
+*.env
 
 # Docker temp exports
 *.tar
